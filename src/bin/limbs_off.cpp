@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
                         limbsOff->cease();
             }
             // Screen
-            if (keystate[SDLK_LALT] && event.type == SDL_KEYDOWN && 
+            if ( (keystate[SDLK_LALT] || keystate[SDLK_RALT]) && event.type == SDL_KEYDOWN && 
                     event.key.keysym.sym == SDLK_RETURN) {
                 // Enter/leave fullscreen
                 if (!screen->getFullscreen()) {
